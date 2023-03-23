@@ -27,8 +27,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
    */
   public void init() {
     // Subscribe to messages here
-    mvcMessaging.subscribe("model:variable1Changed", this);
-    mvcMessaging.subscribe("model:variable2Changed", this);
+    
   }
   
   @Override
@@ -136,258 +135,578 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton0.setBackground(new java.awt.Color(0, 153, 51));
         jButton0.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(0, 153, 51));
         jButton1.setForeground(new java.awt.Color(150, 150, 150));
         jButton1.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(0, 153, 51));
         jButton2.setForeground(new java.awt.Color(150, 150, 150));
         jButton2.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(0, 153, 51));
         jButton3.setForeground(new java.awt.Color(150, 150, 150));
         jButton3.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(0, 153, 51));
         jButton4.setForeground(new java.awt.Color(150, 150, 150));
         jButton4.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton5.setBackground(new java.awt.Color(0, 153, 51));
         jButton5.setForeground(new java.awt.Color(150, 150, 150));
         jButton5.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(0, 153, 51));
         jButton6.setForeground(new java.awt.Color(150, 150, 150));
         jButton6.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton7.setBackground(new java.awt.Color(0, 153, 51));
         jButton7.setForeground(new java.awt.Color(150, 150, 150));
         jButton7.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton8.setBackground(new java.awt.Color(0, 153, 51));
         jButton8.setForeground(new java.awt.Color(150, 150, 150));
         jButton8.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton9.setBackground(new java.awt.Color(0, 153, 51));
         jButton9.setForeground(new java.awt.Color(150, 150, 150));
         jButton9.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton10.setBackground(new java.awt.Color(0, 153, 51));
         jButton10.setForeground(new java.awt.Color(150, 150, 150));
         jButton10.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton11.setBackground(new java.awt.Color(0, 153, 51));
         jButton11.setForeground(new java.awt.Color(150, 150, 150));
         jButton11.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton12.setBackground(new java.awt.Color(0, 153, 51));
         jButton12.setForeground(new java.awt.Color(150, 150, 150));
         jButton12.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton13.setBackground(new java.awt.Color(0, 153, 51));
         jButton13.setForeground(new java.awt.Color(150, 150, 150));
         jButton13.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton14.setBackground(new java.awt.Color(0, 153, 51));
         jButton14.setForeground(new java.awt.Color(150, 150, 150));
         jButton14.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton15.setBackground(new java.awt.Color(0, 153, 51));
         jButton15.setForeground(new java.awt.Color(150, 150, 150));
         jButton15.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton16.setBackground(new java.awt.Color(0, 153, 51));
         jButton16.setForeground(new java.awt.Color(150, 150, 150));
         jButton16.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton17.setBackground(new java.awt.Color(0, 153, 51));
         jButton17.setForeground(new java.awt.Color(150, 150, 150));
         jButton17.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton18.setBackground(new java.awt.Color(0, 153, 51));
         jButton18.setForeground(new java.awt.Color(150, 150, 150));
         jButton18.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton19.setBackground(new java.awt.Color(0, 153, 51));
         jButton19.setForeground(new java.awt.Color(150, 150, 150));
         jButton19.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton20.setBackground(new java.awt.Color(0, 153, 51));
         jButton20.setForeground(new java.awt.Color(150, 150, 150));
         jButton20.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton21.setBackground(new java.awt.Color(0, 153, 51));
         jButton21.setForeground(new java.awt.Color(150, 150, 150));
         jButton21.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton22.setBackground(new java.awt.Color(0, 153, 51));
         jButton22.setForeground(new java.awt.Color(150, 150, 150));
         jButton22.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton23.setBackground(new java.awt.Color(0, 153, 51));
         jButton23.setForeground(new java.awt.Color(150, 150, 150));
         jButton23.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton24.setBackground(new java.awt.Color(0, 153, 51));
         jButton24.setForeground(new java.awt.Color(150, 150, 150));
         jButton24.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton25.setBackground(new java.awt.Color(0, 153, 51));
         jButton25.setForeground(new java.awt.Color(150, 150, 150));
         jButton25.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton26.setBackground(new java.awt.Color(0, 153, 51));
         jButton26.setForeground(new java.awt.Color(150, 150, 150));
         jButton26.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton27.setBackground(new java.awt.Color(0, 153, 51));
         jButton27.setForeground(new java.awt.Color(150, 150, 150));
         jButton27.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton28.setBackground(new java.awt.Color(0, 153, 51));
         jButton28.setForeground(new java.awt.Color(150, 150, 150));
         jButton28.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton29.setBackground(new java.awt.Color(0, 153, 51));
         jButton29.setForeground(new java.awt.Color(150, 150, 150));
         jButton29.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton30.setBackground(new java.awt.Color(0, 153, 51));
         jButton30.setForeground(new java.awt.Color(150, 150, 150));
         jButton30.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton31.setBackground(new java.awt.Color(0, 153, 51));
         jButton31.setForeground(new java.awt.Color(150, 150, 150));
         jButton31.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton32.setBackground(new java.awt.Color(0, 153, 51));
         jButton32.setForeground(new java.awt.Color(150, 150, 150));
         jButton32.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton33.setBackground(new java.awt.Color(0, 153, 51));
         jButton33.setForeground(new java.awt.Color(150, 150, 150));
         jButton33.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton34.setBackground(new java.awt.Color(0, 153, 51));
         jButton34.setForeground(new java.awt.Color(150, 150, 150));
         jButton34.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton35.setBackground(new java.awt.Color(0, 153, 51));
         jButton35.setForeground(new java.awt.Color(150, 150, 150));
         jButton35.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton36.setBackground(new java.awt.Color(0, 153, 51));
         jButton36.setForeground(new java.awt.Color(150, 150, 150));
         jButton36.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton37.setBackground(new java.awt.Color(0, 153, 51));
         jButton37.setForeground(new java.awt.Color(150, 150, 150));
         jButton37.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton38.setBackground(new java.awt.Color(0, 153, 51));
         jButton38.setForeground(new java.awt.Color(150, 150, 150));
         jButton38.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton39.setBackground(new java.awt.Color(0, 153, 51));
         jButton39.setForeground(new java.awt.Color(150, 150, 150));
         jButton39.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton40.setBackground(new java.awt.Color(0, 153, 51));
         jButton40.setForeground(new java.awt.Color(150, 150, 150));
         jButton40.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton41.setBackground(new java.awt.Color(0, 153, 51));
         jButton41.setForeground(new java.awt.Color(150, 150, 150));
         jButton41.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton42.setBackground(new java.awt.Color(0, 153, 51));
         jButton42.setForeground(new java.awt.Color(150, 150, 150));
         jButton42.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton43.setBackground(new java.awt.Color(0, 153, 51));
         jButton43.setForeground(new java.awt.Color(150, 150, 150));
         jButton43.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton44.setBackground(new java.awt.Color(0, 153, 51));
         jButton44.setForeground(new java.awt.Color(150, 150, 150));
         jButton44.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton44.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton45.setBackground(new java.awt.Color(0, 153, 51));
         jButton45.setForeground(new java.awt.Color(150, 150, 150));
         jButton45.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton45.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton46.setBackground(new java.awt.Color(0, 153, 51));
         jButton46.setForeground(new java.awt.Color(150, 150, 150));
         jButton46.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton46.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton47.setBackground(new java.awt.Color(0, 153, 51));
         jButton47.setForeground(new java.awt.Color(150, 150, 150));
         jButton47.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton47.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton48.setBackground(new java.awt.Color(0, 153, 51));
         jButton48.setForeground(new java.awt.Color(150, 150, 150));
         jButton48.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton48.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton49.setBackground(new java.awt.Color(0, 153, 51));
         jButton49.setForeground(new java.awt.Color(150, 150, 150));
         jButton49.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton49.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton50.setBackground(new java.awt.Color(0, 153, 51));
         jButton50.setForeground(new java.awt.Color(150, 150, 150));
         jButton50.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton50.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton51.setBackground(new java.awt.Color(0, 153, 51));
         jButton51.setForeground(new java.awt.Color(150, 150, 150));
         jButton51.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton52.setBackground(new java.awt.Color(0, 153, 51));
         jButton52.setForeground(new java.awt.Color(150, 150, 150));
         jButton52.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton52.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton53.setBackground(new java.awt.Color(0, 153, 51));
         jButton53.setForeground(new java.awt.Color(150, 150, 150));
         jButton53.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton54.setBackground(new java.awt.Color(0, 153, 51));
         jButton54.setForeground(new java.awt.Color(150, 150, 150));
         jButton54.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton54.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton55.setBackground(new java.awt.Color(0, 153, 51));
         jButton55.setForeground(new java.awt.Color(150, 150, 150));
         jButton55.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton55.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton56.setBackground(new java.awt.Color(0, 153, 51));
         jButton56.setForeground(new java.awt.Color(150, 150, 150));
         jButton56.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton56.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton57.setBackground(new java.awt.Color(0, 153, 51));
         jButton57.setForeground(new java.awt.Color(150, 150, 150));
         jButton57.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton57.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton58.setBackground(new java.awt.Color(0, 153, 51));
         jButton58.setForeground(new java.awt.Color(150, 150, 150));
         jButton58.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton58.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton59.setBackground(new java.awt.Color(0, 153, 51));
         jButton59.setForeground(new java.awt.Color(150, 150, 150));
         jButton59.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton59.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton60.setBackground(new java.awt.Color(0, 153, 51));
         jButton60.setForeground(new java.awt.Color(150, 150, 150));
         jButton60.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton60.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton61.setBackground(new java.awt.Color(0, 153, 51));
         jButton61.setForeground(new java.awt.Color(150, 150, 150));
         jButton61.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton61.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton62.setBackground(new java.awt.Color(0, 153, 51));
         jButton62.setForeground(new java.awt.Color(150, 150, 150));
         jButton62.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton62.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         jButton63.setBackground(new java.awt.Color(0, 153, 51));
         jButton63.setForeground(new java.awt.Color(150, 150, 150));
         jButton63.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton63.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -622,6 +941,12 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onClick
+        // TODO add your handling code here:
+        this.mvcMessaging.notify("buttonClicked");
+        
+    }//GEN-LAST:event_onClick
 
   /**
    * @param args the command line arguments
