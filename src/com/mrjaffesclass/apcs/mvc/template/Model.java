@@ -11,6 +11,7 @@ public class Model implements MessageHandler {
 
   // Messaging system for the MVC
   private final Messenger mvcMessaging;
+  Boolean whoseMove;
 
   // Model's data variables
   
@@ -22,19 +23,26 @@ public class Model implements MessageHandler {
    */
   public Model(Messenger messages) {
     mvcMessaging = messages;
+    Boolean whoseMove = true; 
+    // true = white; false = black;
+    
+    
   }
   
   /**
    * Initialize the model here and subscribe to any required messages
    */
   public void init() {
-    
+    this.mvcMessaging.subscribe("spaceClicked", this);
   }
   
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
     if (messagePayload != null) {
       System.out.println("MSG: received by model: "+messageName+" | "+messagePayload.toString());
+    } else if (messageName.equals("spaceClicked")) {
+        
+        this.mvcMessaging.notify("colorChange", this.whoseMove);
     } else {
       System.out.println("MSG: received by model: "+messageName+" | No data sent");
     }

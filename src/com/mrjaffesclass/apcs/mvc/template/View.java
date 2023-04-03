@@ -1,5 +1,6 @@
 package com.mrjaffesclass.apcs.mvc.template;
 import com.mrjaffesclass.apcs.messenger.*;
+import javax.swing.JButton;
 /**
  * MVC Template
  * This is a template of an MVC framework used by APCS for the 
@@ -37,8 +38,10 @@ public class View extends javax.swing.JFrame implements MessageHandler {
     } else {
       System.out.println("MSG: received by view: "+messageName+" | No data sent");
     }
-    if (messageName.equals("model:variable1Changed")) {
-     
+    if (messageName.equals("colorChange")) {
+        
+        
+        
     } else {
       
     }
@@ -944,7 +947,8 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
     private void onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onClick
         // TODO add your handling code here:
-        this.mvcMessaging.notify("buttonClicked");
+        JButton button = (JButton) evt.getSource();
+        this.mvcMessaging.notify("spaceClicked", button.getName());
         
     }//GEN-LAST:event_onClick
 
