@@ -39,6 +39,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
       System.out.println("MSG: received by view: "+messageName+" | No data sent");
     }
     if (messageName.equals("colorChange")) {
+        messagePayload = (Boolean)messagePayload; 
         
         
         

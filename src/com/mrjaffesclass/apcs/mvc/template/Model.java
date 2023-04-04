@@ -43,6 +43,7 @@ public class Model implements MessageHandler {
     } else if (messageName.equals("spaceClicked")) {
         
         this.mvcMessaging.notify("colorChange", this.whoseMove);
+        this.mvcMessaging.notify("colorChange");
     } else {
       System.out.println("MSG: received by model: "+messageName+" | No data sent");
     }
