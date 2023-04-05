@@ -12,7 +12,7 @@ public class Model implements MessageHandler {
 
   // Messaging system for the MVC
   private final Messenger mvcMessaging;
-  Boolean whoseMove;
+  Boolean whoseMove = true;
   int[][] board;
   // Model's data variables
   
@@ -33,7 +33,7 @@ public class Model implements MessageHandler {
   }
   
   public String spaceNameTrim(String name) {
-      name = name.substring(6);
+      name = name.substring(7);
       return name;
   }
   
@@ -51,15 +51,19 @@ public class Model implements MessageHandler {
   public void messageHandler(String messageName, Object messagePayload) {
     if (messagePayload != null) {
       System.out.println("MSG: received by model: "+messageName+" | "+messagePayload.toString());
-    } else if (messageName.equals("spaceClicked")) {
+    } 
+    if (messageName.equals("spaceClicked")) {
         String MPString = (String)(messagePayload);
+        System.out.println(MPString);
         MPString = spaceNameTrim(MPString);
         
-        if(whoseMove) {
+        if(this.whoseMove) {
             MPString += "t";
         } else {
             MPString += "f";
         }
+        this.whoseMove = !this.whoseMove;
+        
         
         String spaceColor = MPString;
         this.mvcMessaging.notify("colorChange", spaceColor);

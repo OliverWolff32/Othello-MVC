@@ -24,7 +24,70 @@ public class View extends javax.swing.JFrame implements MessageHandler {
   public View(Messenger messages) {
     mvcMessaging = messages;   // Save the calling controller instance
     initComponents();           // Create and init the GUI components
-  
+    jButton00.setName("jButton00"); // changes names to array indexes
+jButton01.setName("jButton01");
+jButton02.setName("jButton02");
+jButton03.setName("jButton03");
+jButton04.setName("jButton04");
+jButton05.setName("jButton05");
+jButton06.setName("jButton06");
+jButton07.setName("jButton07");
+jButton10.setName("jButton10");
+jButton11.setName("jButton11");
+jButton12.setName("jButton12");
+jButton13.setName("jButton13");
+jButton14.setName("jButton14");
+jButton15.setName("jButton15");
+jButton16.setName("jButton16");
+jButton17.setName("jButton17");
+jButton20.setName("jButton20");
+jButton21.setName("jButton21");
+jButton22.setName("jButton22");
+jButton23.setName("jButton23");
+jButton24.setName("jButton24");
+jButton25.setName("jButton25");
+jButton26.setName("jButton26");
+jButton27.setName("jButton27");
+jButton30.setName("jButton30");
+jButton31.setName("jButton31");
+jButton32.setName("jButton32");
+jButton33.setName("jButton33");
+jButton34.setName("jButton34");
+jButton35.setName("jButton35");
+jButton36.setName("jButton36");
+jButton37.setName("jButton37");
+jButton40.setName("jButton40");
+jButton41.setName("jButton41");
+jButton42.setName("jButton42");
+jButton43.setName("jButton43");
+jButton44.setName("jButton44");
+jButton45.setName("jButton45");
+jButton46.setName("jButton46");
+jButton47.setName("jButton47");
+jButton50.setName("jButton50");
+jButton51.setName("jButton51");
+jButton52.setName("jButton52");
+jButton53.setName("jButton53");
+jButton54.setName("jButton54");
+jButton55.setName("jButton55");
+jButton56.setName("jButton56");
+jButton57.setName("jButton57");
+jButton60.setName("jButton60");
+jButton61.setName("jButton61");
+jButton62.setName("jButton62");
+jButton63.setName("jButton63");
+jButton64.setName("jButton64");
+jButton65.setName("jButton65");
+jButton66.setName("jButton66");
+jButton67.setName("jButton67");
+jButton70.setName("jButton70");
+jButton71.setName("jButton71");
+jButton72.setName("jButton72");
+jButton73.setName("jButton73");
+jButton74.setName("jButton74");
+jButton75.setName("jButton75");
+jButton76.setName("jButton76");
+jButton77.setName("jButton77");
     buttons = new JButton[][] { { jButton00, jButton01, jButton02, jButton03, jButton04, jButton05, jButton06, jButton07 },
                                 { jButton10, jButton11, jButton12, jButton13, jButton14, jButton15, jButton16, jButton17 },
                                 { jButton20, jButton21, jButton22, jButton23, jButton24, jButton25, jButton26, jButton27 },
@@ -158,6 +221,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
         setPreferredSize(new java.awt.Dimension(500, 500));
 
         jButton00.setBackground(new java.awt.Color(0, 153, 51));
+        jButton00.setName("jButton00"); // NOI18N
         jButton00.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton00.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,6 +231,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton01.setBackground(new java.awt.Color(0, 153, 51));
         jButton01.setForeground(new java.awt.Color(150, 150, 150));
+        jButton01.setName("jButton01"); // NOI18N
         jButton01.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,6 +241,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton02.setBackground(new java.awt.Color(0, 153, 51));
         jButton02.setForeground(new java.awt.Color(150, 150, 150));
+        jButton02.setName("jButton02"); // NOI18N
         jButton02.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,6 +251,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton03.setBackground(new java.awt.Color(0, 153, 51));
         jButton03.setForeground(new java.awt.Color(150, 150, 150));
+        jButton03.setName("jButton03"); // NOI18N
         jButton03.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,6 +261,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton04.setBackground(new java.awt.Color(0, 153, 51));
         jButton04.setForeground(new java.awt.Color(150, 150, 150));
+        jButton04.setName("jButton04"); // NOI18N
         jButton04.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,6 +271,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton05.setBackground(new java.awt.Color(0, 153, 51));
         jButton05.setForeground(new java.awt.Color(150, 150, 150));
+        jButton05.setName("jButton05"); // NOI18N
         jButton05.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,6 +281,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton06.setBackground(new java.awt.Color(0, 153, 51));
         jButton06.setForeground(new java.awt.Color(150, 150, 150));
+        jButton06.setName("jButton06"); // NOI18N
         jButton06.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,6 +291,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton07.setBackground(new java.awt.Color(0, 153, 51));
         jButton07.setForeground(new java.awt.Color(150, 150, 150));
+        jButton07.setName("jButton07"); // NOI18N
         jButton07.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton07.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,6 +301,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton10.setBackground(new java.awt.Color(0, 153, 51));
         jButton10.setForeground(new java.awt.Color(150, 150, 150));
+        jButton10.setName("jButton10"); // NOI18N
         jButton10.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,6 +311,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton11.setBackground(new java.awt.Color(0, 153, 51));
         jButton11.setForeground(new java.awt.Color(150, 150, 150));
+        jButton11.setName("jButton11"); // NOI18N
         jButton11.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,6 +321,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton12.setBackground(new java.awt.Color(0, 153, 51));
         jButton12.setForeground(new java.awt.Color(150, 150, 150));
+        jButton12.setName("jButton12"); // NOI18N
         jButton12.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -257,6 +331,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton13.setBackground(new java.awt.Color(0, 153, 51));
         jButton13.setForeground(new java.awt.Color(150, 150, 150));
+        jButton13.setName("jButton"); // NOI18N
         jButton13.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -266,6 +341,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton14.setBackground(new java.awt.Color(0, 153, 51));
         jButton14.setForeground(new java.awt.Color(150, 150, 150));
+        jButton14.setName("jButton"); // NOI18N
         jButton14.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,6 +351,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton15.setBackground(new java.awt.Color(0, 153, 51));
         jButton15.setForeground(new java.awt.Color(150, 150, 150));
+        jButton15.setName("jButton"); // NOI18N
         jButton15.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -284,6 +361,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton16.setBackground(new java.awt.Color(0, 153, 51));
         jButton16.setForeground(new java.awt.Color(150, 150, 150));
+        jButton16.setName("jButton"); // NOI18N
         jButton16.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,6 +371,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton17.setBackground(new java.awt.Color(0, 153, 51));
         jButton17.setForeground(new java.awt.Color(150, 150, 150));
+        jButton17.setName("jButton"); // NOI18N
         jButton17.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -302,6 +381,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton20.setBackground(new java.awt.Color(0, 153, 51));
         jButton20.setForeground(new java.awt.Color(150, 150, 150));
+        jButton20.setName("jButton"); // NOI18N
         jButton20.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -311,6 +391,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton21.setBackground(new java.awt.Color(0, 153, 51));
         jButton21.setForeground(new java.awt.Color(150, 150, 150));
+        jButton21.setName("jButton"); // NOI18N
         jButton21.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -320,6 +401,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton22.setBackground(new java.awt.Color(0, 153, 51));
         jButton22.setForeground(new java.awt.Color(150, 150, 150));
+        jButton22.setName("jButton"); // NOI18N
         jButton22.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,6 +411,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton23.setBackground(new java.awt.Color(0, 153, 51));
         jButton23.setForeground(new java.awt.Color(150, 150, 150));
+        jButton23.setName("jButton"); // NOI18N
         jButton23.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -338,6 +421,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton24.setBackground(new java.awt.Color(0, 153, 51));
         jButton24.setForeground(new java.awt.Color(150, 150, 150));
+        jButton24.setName("jButton"); // NOI18N
         jButton24.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -347,6 +431,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton25.setBackground(new java.awt.Color(0, 153, 51));
         jButton25.setForeground(new java.awt.Color(150, 150, 150));
+        jButton25.setName("jButton"); // NOI18N
         jButton25.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -356,6 +441,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton26.setBackground(new java.awt.Color(0, 153, 51));
         jButton26.setForeground(new java.awt.Color(150, 150, 150));
+        jButton26.setName("jButton"); // NOI18N
         jButton26.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -365,6 +451,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton27.setBackground(new java.awt.Color(0, 153, 51));
         jButton27.setForeground(new java.awt.Color(150, 150, 150));
+        jButton27.setName("jButton"); // NOI18N
         jButton27.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -374,6 +461,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton30.setBackground(new java.awt.Color(0, 153, 51));
         jButton30.setForeground(new java.awt.Color(150, 150, 150));
+        jButton30.setName("jButton"); // NOI18N
         jButton30.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -383,6 +471,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton31.setBackground(new java.awt.Color(0, 153, 51));
         jButton31.setForeground(new java.awt.Color(150, 150, 150));
+        jButton31.setName("jButton"); // NOI18N
         jButton31.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -392,6 +481,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton32.setBackground(new java.awt.Color(0, 153, 51));
         jButton32.setForeground(new java.awt.Color(150, 150, 150));
+        jButton32.setName("jButton"); // NOI18N
         jButton32.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -401,6 +491,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton33.setBackground(new java.awt.Color(0, 153, 51));
         jButton33.setForeground(new java.awt.Color(150, 150, 150));
+        jButton33.setName("jButton"); // NOI18N
         jButton33.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -410,6 +501,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton34.setBackground(new java.awt.Color(0, 153, 51));
         jButton34.setForeground(new java.awt.Color(150, 150, 150));
+        jButton34.setName("jButton"); // NOI18N
         jButton34.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -419,6 +511,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton35.setBackground(new java.awt.Color(0, 153, 51));
         jButton35.setForeground(new java.awt.Color(150, 150, 150));
+        jButton35.setName("jButton"); // NOI18N
         jButton35.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -428,6 +521,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton36.setBackground(new java.awt.Color(0, 153, 51));
         jButton36.setForeground(new java.awt.Color(150, 150, 150));
+        jButton36.setName("jButton"); // NOI18N
         jButton36.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -437,6 +531,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton37.setBackground(new java.awt.Color(0, 153, 51));
         jButton37.setForeground(new java.awt.Color(150, 150, 150));
+        jButton37.setName("jButton"); // NOI18N
         jButton37.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -446,6 +541,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton63.setBackground(new java.awt.Color(0, 153, 51));
         jButton63.setForeground(new java.awt.Color(150, 150, 150));
+        jButton63.setName("jButton"); // NOI18N
         jButton63.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton63.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -455,6 +551,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton64.setBackground(new java.awt.Color(0, 153, 51));
         jButton64.setForeground(new java.awt.Color(150, 150, 150));
+        jButton64.setName("jButton"); // NOI18N
         jButton64.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton64.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -464,6 +561,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton65.setBackground(new java.awt.Color(0, 153, 51));
         jButton65.setForeground(new java.awt.Color(150, 150, 150));
+        jButton65.setName("jButton"); // NOI18N
         jButton65.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton65.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -473,6 +571,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton66.setBackground(new java.awt.Color(0, 153, 51));
         jButton66.setForeground(new java.awt.Color(150, 150, 150));
+        jButton66.setName("jButton"); // NOI18N
         jButton66.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton66.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -482,6 +581,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton67.setBackground(new java.awt.Color(0, 153, 51));
         jButton67.setForeground(new java.awt.Color(150, 150, 150));
+        jButton67.setName("jButton"); // NOI18N
         jButton67.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton67.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -491,6 +591,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton70.setBackground(new java.awt.Color(0, 153, 51));
         jButton70.setForeground(new java.awt.Color(150, 150, 150));
+        jButton70.setName("jButton"); // NOI18N
         jButton70.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton70.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -500,6 +601,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton71.setBackground(new java.awt.Color(0, 153, 51));
         jButton71.setForeground(new java.awt.Color(150, 150, 150));
+        jButton71.setName("jButton"); // NOI18N
         jButton71.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton71.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -509,6 +611,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton72.setBackground(new java.awt.Color(0, 153, 51));
         jButton72.setForeground(new java.awt.Color(150, 150, 150));
+        jButton72.setName("jButton"); // NOI18N
         jButton72.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton72.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -518,6 +621,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton73.setBackground(new java.awt.Color(0, 153, 51));
         jButton73.setForeground(new java.awt.Color(150, 150, 150));
+        jButton73.setName("jButton"); // NOI18N
         jButton73.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton73.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -527,6 +631,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton74.setBackground(new java.awt.Color(0, 153, 51));
         jButton74.setForeground(new java.awt.Color(150, 150, 150));
+        jButton74.setName("jButton"); // NOI18N
         jButton74.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton74.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -536,6 +641,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton75.setBackground(new java.awt.Color(0, 153, 51));
         jButton75.setForeground(new java.awt.Color(150, 150, 150));
+        jButton75.setName("jButton"); // NOI18N
         jButton75.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton75.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -545,6 +651,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton76.setBackground(new java.awt.Color(0, 153, 51));
         jButton76.setForeground(new java.awt.Color(150, 150, 150));
+        jButton76.setName("jButton"); // NOI18N
         jButton76.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton76.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -554,6 +661,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton40.setBackground(new java.awt.Color(0, 153, 51));
         jButton40.setForeground(new java.awt.Color(150, 150, 150));
+        jButton40.setName("jButton"); // NOI18N
         jButton40.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton40.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -563,6 +671,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton41.setBackground(new java.awt.Color(0, 153, 51));
         jButton41.setForeground(new java.awt.Color(150, 150, 150));
+        jButton41.setName("jButton"); // NOI18N
         jButton41.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton41.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -572,6 +681,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton42.setBackground(new java.awt.Color(0, 153, 51));
         jButton42.setForeground(new java.awt.Color(150, 150, 150));
+        jButton42.setName("jButton"); // NOI18N
         jButton42.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -581,6 +691,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton43.setBackground(new java.awt.Color(0, 153, 51));
         jButton43.setForeground(new java.awt.Color(150, 150, 150));
+        jButton43.setName("jButton"); // NOI18N
         jButton43.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -590,6 +701,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton44.setBackground(new java.awt.Color(0, 153, 51));
         jButton44.setForeground(new java.awt.Color(150, 150, 150));
+        jButton44.setName("jButton"); // NOI18N
         jButton44.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -599,6 +711,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton45.setBackground(new java.awt.Color(0, 153, 51));
         jButton45.setForeground(new java.awt.Color(150, 150, 150));
+        jButton45.setName("jButton"); // NOI18N
         jButton45.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -608,6 +721,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton46.setBackground(new java.awt.Color(0, 153, 51));
         jButton46.setForeground(new java.awt.Color(150, 150, 150));
+        jButton46.setName("jButton"); // NOI18N
         jButton46.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -617,6 +731,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton47.setBackground(new java.awt.Color(0, 153, 51));
         jButton47.setForeground(new java.awt.Color(150, 150, 150));
+        jButton47.setName("jButton"); // NOI18N
         jButton47.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton47.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -626,6 +741,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton50.setBackground(new java.awt.Color(0, 153, 51));
         jButton50.setForeground(new java.awt.Color(150, 150, 150));
+        jButton50.setName("jButton"); // NOI18N
         jButton50.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -635,6 +751,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton51.setBackground(new java.awt.Color(0, 153, 51));
         jButton51.setForeground(new java.awt.Color(150, 150, 150));
+        jButton51.setName("jButton"); // NOI18N
         jButton51.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton51.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -644,6 +761,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton52.setBackground(new java.awt.Color(0, 153, 51));
         jButton52.setForeground(new java.awt.Color(150, 150, 150));
+        jButton52.setName("jButton"); // NOI18N
         jButton52.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton52.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -653,6 +771,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton77.setBackground(new java.awt.Color(0, 153, 51));
         jButton77.setForeground(new java.awt.Color(150, 150, 150));
+        jButton77.setName("jButton"); // NOI18N
         jButton77.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton77.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -662,6 +781,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton53.setBackground(new java.awt.Color(0, 153, 51));
         jButton53.setForeground(new java.awt.Color(150, 150, 150));
+        jButton53.setName("jButton"); // NOI18N
         jButton53.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton53.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -671,6 +791,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton54.setBackground(new java.awt.Color(0, 153, 51));
         jButton54.setForeground(new java.awt.Color(150, 150, 150));
+        jButton54.setName("jButton"); // NOI18N
         jButton54.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton54.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -680,6 +801,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton55.setBackground(new java.awt.Color(0, 153, 51));
         jButton55.setForeground(new java.awt.Color(150, 150, 150));
+        jButton55.setName("jButton"); // NOI18N
         jButton55.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -689,6 +811,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton56.setBackground(new java.awt.Color(0, 153, 51));
         jButton56.setForeground(new java.awt.Color(150, 150, 150));
+        jButton56.setName("jButton"); // NOI18N
         jButton56.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton56.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -698,6 +821,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton57.setBackground(new java.awt.Color(0, 153, 51));
         jButton57.setForeground(new java.awt.Color(150, 150, 150));
+        jButton57.setName("jButton"); // NOI18N
         jButton57.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -707,6 +831,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton60.setBackground(new java.awt.Color(0, 153, 51));
         jButton60.setForeground(new java.awt.Color(150, 150, 150));
+        jButton60.setName("jButton"); // NOI18N
         jButton60.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -716,6 +841,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton61.setBackground(new java.awt.Color(0, 153, 51));
         jButton61.setForeground(new java.awt.Color(150, 150, 150));
+        jButton61.setName("jButton"); // NOI18N
         jButton61.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton61.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -725,6 +851,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
         jButton62.setBackground(new java.awt.Color(0, 153, 51));
         jButton62.setForeground(new java.awt.Color(150, 150, 150));
+        jButton62.setName("jButton"); // NOI18N
         jButton62.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton62.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
