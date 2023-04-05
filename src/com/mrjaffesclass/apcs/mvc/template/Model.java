@@ -55,6 +55,14 @@ public class Model implements MessageHandler {
         String MPString = (String)(messagePayload);
         MPString = spaceNameTrim(MPString);
         
+        if(whoseMove) {
+            MPString += "t";
+        } else {
+            MPString += "f";
+        }
+        
+        String spaceColor = MPString;
+        this.mvcMessaging.notify("colorChange", spaceColor);
         
     } else {
       System.out.println("MSG: received by model: "+messageName+" | No data sent");

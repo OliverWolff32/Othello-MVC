@@ -1,5 +1,6 @@
 package com.mrjaffesclass.apcs.mvc.template;
 import com.mrjaffesclass.apcs.messenger.*;
+import java.awt.Color;
 import javax.swing.JButton;
 /**
  * MVC Template
@@ -12,6 +13,9 @@ import javax.swing.JButton;
 public class View extends javax.swing.JFrame implements MessageHandler {
 
   private final Messenger mvcMessaging;
+  private final JButton[][] buttons;
+  
+  
   
   /**
    * Creates a new view
@@ -20,6 +24,15 @@ public class View extends javax.swing.JFrame implements MessageHandler {
   public View(Messenger messages) {
     mvcMessaging = messages;   // Save the calling controller instance
     initComponents();           // Create and init the GUI components
+  
+    buttons = new JButton[][] { { jButton00, jButton01, jButton02, jButton03, jButton04, jButton05, jButton06, jButton07 },
+                                { jButton10, jButton11, jButton12, jButton13, jButton14, jButton15, jButton16, jButton17 },
+                                { jButton20, jButton21, jButton22, jButton23, jButton24, jButton25, jButton26, jButton27 },
+                                { jButton30, jButton31, jButton32, jButton33, jButton34, jButton35, jButton36, jButton37 },
+                                { jButton40, jButton41, jButton42, jButton43, jButton44, jButton45, jButton46, jButton47 },
+                                { jButton50, jButton51, jButton52, jButton53, jButton54, jButton55, jButton56, jButton57 },
+                                { jButton60, jButton61, jButton62, jButton63, jButton64, jButton65, jButton66, jButton67 },
+                                { jButton70, jButton71, jButton72, jButton73, jButton74, jButton75, jButton76, jButton77 }};
   }
   
   /**
@@ -28,7 +41,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
    */
   public void init() {
     // Subscribe to messages here
-    
+    this.mvcMessaging.subscribe("colorChange", this);
   }
   
   @Override
@@ -39,9 +52,16 @@ public class View extends javax.swing.JFrame implements MessageHandler {
       System.out.println("MSG: received by view: "+messageName+" | No data sent");
     }
     if (messageName.equals("colorChange")) {
-        messagePayload = (Boolean)messagePayload; 
+        String mp = (String)messagePayload;
         
-        
+        int row = Integer.parseInt(mp.substring(0, 1));
+        int col = Integer.parseInt(mp.substring(1, 2));
+        String spaceColor = mp.substring(2, 3);
+        if(spaceColor.equals("t")) {
+            buttons[row][col].setBackground(Color.WHITE);
+        } else if(spaceColor.equals("f")) {
+            buttons[row][col].setBackground(Color.BLACK);
+        }
         
     } else {
       
