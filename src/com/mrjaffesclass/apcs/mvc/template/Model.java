@@ -54,6 +54,18 @@ public class Model implements MessageHandler {
       return ret; 
   }
   
+  public Boolean isLegalMove(String mp) {
+      int row = Integer.valueOf(mp.substring(0,1));
+      int col = Integer.valueOf(mp.substring(1,2));
+      return this.board[row][col] == 0;
+  }
+  
+  public void setBoardState(String mp) {
+      int row = Integer.valueOf(mp.substring(0,1));
+      int col = Integer.valueOf(mp.substring(1,2));
+      board[row][col] =  this.whoseMove ? 1 : -1;
+  }
+  
   /**
    * Initialize the model here and subscribe to any required messages
    */
@@ -70,20 +82,20 @@ public class Model implements MessageHandler {
       System.out.println("MSG: received by model: "+messageName+" | "+messagePayload.toString());
     } 
     if (messageName.equals("spaceClicked")) {
+        //set message payload to row, col, whosemove
         String MPString = (String)(messagePayload);
         MPString = MPStringSetter(MPString);
         System.out.println(MPString);
-        int row = Integer.valueOf(MPString.substring(0,1));
-        int col = Integer.valueOf(MPString.substring(1,2));
         
         
-        if(board[row][col] == 0) {
-            board[row][col] =  whoseMove ? 1 : -1;
-            
-            this.whoseMove = !this.whoseMove;
-            String spaceColor = MPString;
-            this.mvcMessaging.notify("colorChange", spaceColor);
+        if(isLegalMove(MPString)) {
+            setBoardState(MPString); //changes the board spot that was clicked 
+                                        //to 1 if white and -1 if black
+            this.whoseMove = !this.whoseMove; // changes whose move it is
+            this.mvcMessaging.notify("colorChange", MPString); // tells view to change the visuals
         }
+            
+        
     } else {
       System.out.println("MSG: received by model: "+messageName+" | No data sent");
     }
