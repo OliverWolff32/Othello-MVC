@@ -13,7 +13,9 @@ public class Model implements MessageHandler {
   // Messaging system for the MVC
   private final Messenger mvcMessaging;
   Boolean whoseMove = true;
-  int[][] board;
+  int[][] board = new int[8][8];
+  
+
   // Model's data variables
   
   
@@ -29,12 +31,27 @@ public class Model implements MessageHandler {
   public Model(Messenger messages) {
     mvcMessaging = messages;
     Boolean whoseMove = true; 
+    for(int i = 0; i < 8; i++) {
+        for(int j = 0; j < 8; j++) {
+            board[i][j] = 0;
+        }
+    }
     // true = white; false = black;
   }
   
   public String spaceNameTrim(String name) {
       name = name.substring(7);
       return name;
+  }
+  
+  public String MPStringSetter(String str) {
+      String ret = spaceNameTrim(str);
+      if(this.whoseMove) {
+              ret += "t";
+            } else {
+              ret += "f";
+            }
+      return ret; 
   }
   
   /**
@@ -54,20 +71,19 @@ public class Model implements MessageHandler {
     } 
     if (messageName.equals("spaceClicked")) {
         String MPString = (String)(messagePayload);
+        MPString = MPStringSetter(MPString);
         System.out.println(MPString);
-        MPString = spaceNameTrim(MPString);
+        int row = Integer.valueOf(MPString.substring(0,1));
+        int col = Integer.valueOf(MPString.substring(1,2));
         
-        if(this.whoseMove) {
-            MPString += "t";
-        } else {
-            MPString += "f";
+        
+        if(board[row][col] == 0) {
+            board[row][col] =  whoseMove ? 1 : -1;
+            
+            this.whoseMove = !this.whoseMove;
+            String spaceColor = MPString;
+            this.mvcMessaging.notify("colorChange", spaceColor);
         }
-        this.whoseMove = !this.whoseMove;
-        
-        
-        String spaceColor = MPString;
-        this.mvcMessaging.notify("colorChange", spaceColor);
-        
     } else {
       System.out.println("MSG: received by model: "+messageName+" | No data sent");
     }

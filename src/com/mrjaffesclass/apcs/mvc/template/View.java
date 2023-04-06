@@ -218,11 +218,11 @@ jButton77.setName("jButton77");
         jButton62 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 500));
+        setPreferredSize(new java.awt.Dimension(700, 700));
 
         jButton00.setBackground(new java.awt.Color(0, 153, 51));
         jButton00.setName("jButton00"); // NOI18N
-        jButton00.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton00.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton00.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -232,7 +232,7 @@ jButton77.setName("jButton77");
         jButton01.setBackground(new java.awt.Color(0, 153, 51));
         jButton01.setForeground(new java.awt.Color(150, 150, 150));
         jButton01.setName("jButton01"); // NOI18N
-        jButton01.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton01.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton01.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -242,7 +242,7 @@ jButton77.setName("jButton77");
         jButton02.setBackground(new java.awt.Color(0, 153, 51));
         jButton02.setForeground(new java.awt.Color(150, 150, 150));
         jButton02.setName("jButton02"); // NOI18N
-        jButton02.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton02.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton02.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -252,7 +252,7 @@ jButton77.setName("jButton77");
         jButton03.setBackground(new java.awt.Color(0, 153, 51));
         jButton03.setForeground(new java.awt.Color(150, 150, 150));
         jButton03.setName("jButton03"); // NOI18N
-        jButton03.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton03.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton03.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -262,7 +262,7 @@ jButton77.setName("jButton77");
         jButton04.setBackground(new java.awt.Color(0, 153, 51));
         jButton04.setForeground(new java.awt.Color(150, 150, 150));
         jButton04.setName("jButton04"); // NOI18N
-        jButton04.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton04.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton04.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -272,7 +272,7 @@ jButton77.setName("jButton77");
         jButton05.setBackground(new java.awt.Color(0, 153, 51));
         jButton05.setForeground(new java.awt.Color(150, 150, 150));
         jButton05.setName("jButton05"); // NOI18N
-        jButton05.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton05.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton05.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -282,7 +282,7 @@ jButton77.setName("jButton77");
         jButton06.setBackground(new java.awt.Color(0, 153, 51));
         jButton06.setForeground(new java.awt.Color(150, 150, 150));
         jButton06.setName("jButton06"); // NOI18N
-        jButton06.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton06.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton06.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -292,7 +292,7 @@ jButton77.setName("jButton77");
         jButton07.setBackground(new java.awt.Color(0, 153, 51));
         jButton07.setForeground(new java.awt.Color(150, 150, 150));
         jButton07.setName("jButton07"); // NOI18N
-        jButton07.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton07.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton07.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -302,7 +302,7 @@ jButton77.setName("jButton77");
         jButton10.setBackground(new java.awt.Color(0, 153, 51));
         jButton10.setForeground(new java.awt.Color(150, 150, 150));
         jButton10.setName("jButton10"); // NOI18N
-        jButton10.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton10.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -312,7 +312,7 @@ jButton77.setName("jButton77");
         jButton11.setBackground(new java.awt.Color(0, 153, 51));
         jButton11.setForeground(new java.awt.Color(150, 150, 150));
         jButton11.setName("jButton11"); // NOI18N
-        jButton11.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton11.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -322,7 +322,7 @@ jButton77.setName("jButton77");
         jButton12.setBackground(new java.awt.Color(0, 153, 51));
         jButton12.setForeground(new java.awt.Color(150, 150, 150));
         jButton12.setName("jButton12"); // NOI18N
-        jButton12.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton12.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -332,7 +332,7 @@ jButton77.setName("jButton77");
         jButton13.setBackground(new java.awt.Color(0, 153, 51));
         jButton13.setForeground(new java.awt.Color(150, 150, 150));
         jButton13.setName("jButton"); // NOI18N
-        jButton13.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton13.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -342,7 +342,7 @@ jButton77.setName("jButton77");
         jButton14.setBackground(new java.awt.Color(0, 153, 51));
         jButton14.setForeground(new java.awt.Color(150, 150, 150));
         jButton14.setName("jButton"); // NOI18N
-        jButton14.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton14.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -352,7 +352,7 @@ jButton77.setName("jButton77");
         jButton15.setBackground(new java.awt.Color(0, 153, 51));
         jButton15.setForeground(new java.awt.Color(150, 150, 150));
         jButton15.setName("jButton"); // NOI18N
-        jButton15.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton15.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -362,7 +362,7 @@ jButton77.setName("jButton77");
         jButton16.setBackground(new java.awt.Color(0, 153, 51));
         jButton16.setForeground(new java.awt.Color(150, 150, 150));
         jButton16.setName("jButton"); // NOI18N
-        jButton16.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton16.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -372,7 +372,7 @@ jButton77.setName("jButton77");
         jButton17.setBackground(new java.awt.Color(0, 153, 51));
         jButton17.setForeground(new java.awt.Color(150, 150, 150));
         jButton17.setName("jButton"); // NOI18N
-        jButton17.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton17.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -382,7 +382,7 @@ jButton77.setName("jButton77");
         jButton20.setBackground(new java.awt.Color(0, 153, 51));
         jButton20.setForeground(new java.awt.Color(150, 150, 150));
         jButton20.setName("jButton"); // NOI18N
-        jButton20.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton20.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -392,7 +392,7 @@ jButton77.setName("jButton77");
         jButton21.setBackground(new java.awt.Color(0, 153, 51));
         jButton21.setForeground(new java.awt.Color(150, 150, 150));
         jButton21.setName("jButton"); // NOI18N
-        jButton21.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton21.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -402,7 +402,7 @@ jButton77.setName("jButton77");
         jButton22.setBackground(new java.awt.Color(0, 153, 51));
         jButton22.setForeground(new java.awt.Color(150, 150, 150));
         jButton22.setName("jButton"); // NOI18N
-        jButton22.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton22.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -412,7 +412,7 @@ jButton77.setName("jButton77");
         jButton23.setBackground(new java.awt.Color(0, 153, 51));
         jButton23.setForeground(new java.awt.Color(150, 150, 150));
         jButton23.setName("jButton"); // NOI18N
-        jButton23.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton23.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -422,7 +422,7 @@ jButton77.setName("jButton77");
         jButton24.setBackground(new java.awt.Color(0, 153, 51));
         jButton24.setForeground(new java.awt.Color(150, 150, 150));
         jButton24.setName("jButton"); // NOI18N
-        jButton24.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton24.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -432,7 +432,7 @@ jButton77.setName("jButton77");
         jButton25.setBackground(new java.awt.Color(0, 153, 51));
         jButton25.setForeground(new java.awt.Color(150, 150, 150));
         jButton25.setName("jButton"); // NOI18N
-        jButton25.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton25.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -442,7 +442,7 @@ jButton77.setName("jButton77");
         jButton26.setBackground(new java.awt.Color(0, 153, 51));
         jButton26.setForeground(new java.awt.Color(150, 150, 150));
         jButton26.setName("jButton"); // NOI18N
-        jButton26.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton26.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -452,7 +452,7 @@ jButton77.setName("jButton77");
         jButton27.setBackground(new java.awt.Color(0, 153, 51));
         jButton27.setForeground(new java.awt.Color(150, 150, 150));
         jButton27.setName("jButton"); // NOI18N
-        jButton27.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton27.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -462,7 +462,7 @@ jButton77.setName("jButton77");
         jButton30.setBackground(new java.awt.Color(0, 153, 51));
         jButton30.setForeground(new java.awt.Color(150, 150, 150));
         jButton30.setName("jButton"); // NOI18N
-        jButton30.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton30.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -472,7 +472,7 @@ jButton77.setName("jButton77");
         jButton31.setBackground(new java.awt.Color(0, 153, 51));
         jButton31.setForeground(new java.awt.Color(150, 150, 150));
         jButton31.setName("jButton"); // NOI18N
-        jButton31.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton31.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -482,7 +482,7 @@ jButton77.setName("jButton77");
         jButton32.setBackground(new java.awt.Color(0, 153, 51));
         jButton32.setForeground(new java.awt.Color(150, 150, 150));
         jButton32.setName("jButton"); // NOI18N
-        jButton32.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton32.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -492,7 +492,7 @@ jButton77.setName("jButton77");
         jButton33.setBackground(new java.awt.Color(0, 153, 51));
         jButton33.setForeground(new java.awt.Color(150, 150, 150));
         jButton33.setName("jButton"); // NOI18N
-        jButton33.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton33.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -502,7 +502,7 @@ jButton77.setName("jButton77");
         jButton34.setBackground(new java.awt.Color(0, 153, 51));
         jButton34.setForeground(new java.awt.Color(150, 150, 150));
         jButton34.setName("jButton"); // NOI18N
-        jButton34.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton34.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -512,7 +512,7 @@ jButton77.setName("jButton77");
         jButton35.setBackground(new java.awt.Color(0, 153, 51));
         jButton35.setForeground(new java.awt.Color(150, 150, 150));
         jButton35.setName("jButton"); // NOI18N
-        jButton35.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton35.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -522,7 +522,7 @@ jButton77.setName("jButton77");
         jButton36.setBackground(new java.awt.Color(0, 153, 51));
         jButton36.setForeground(new java.awt.Color(150, 150, 150));
         jButton36.setName("jButton"); // NOI18N
-        jButton36.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton36.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -532,7 +532,7 @@ jButton77.setName("jButton77");
         jButton37.setBackground(new java.awt.Color(0, 153, 51));
         jButton37.setForeground(new java.awt.Color(150, 150, 150));
         jButton37.setName("jButton"); // NOI18N
-        jButton37.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton37.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -542,7 +542,7 @@ jButton77.setName("jButton77");
         jButton63.setBackground(new java.awt.Color(0, 153, 51));
         jButton63.setForeground(new java.awt.Color(150, 150, 150));
         jButton63.setName("jButton"); // NOI18N
-        jButton63.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton63.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton63.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -552,7 +552,7 @@ jButton77.setName("jButton77");
         jButton64.setBackground(new java.awt.Color(0, 153, 51));
         jButton64.setForeground(new java.awt.Color(150, 150, 150));
         jButton64.setName("jButton"); // NOI18N
-        jButton64.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton64.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton64.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -562,7 +562,7 @@ jButton77.setName("jButton77");
         jButton65.setBackground(new java.awt.Color(0, 153, 51));
         jButton65.setForeground(new java.awt.Color(150, 150, 150));
         jButton65.setName("jButton"); // NOI18N
-        jButton65.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton65.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton65.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -572,7 +572,7 @@ jButton77.setName("jButton77");
         jButton66.setBackground(new java.awt.Color(0, 153, 51));
         jButton66.setForeground(new java.awt.Color(150, 150, 150));
         jButton66.setName("jButton"); // NOI18N
-        jButton66.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton66.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton66.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -582,7 +582,7 @@ jButton77.setName("jButton77");
         jButton67.setBackground(new java.awt.Color(0, 153, 51));
         jButton67.setForeground(new java.awt.Color(150, 150, 150));
         jButton67.setName("jButton"); // NOI18N
-        jButton67.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton67.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton67.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -592,7 +592,7 @@ jButton77.setName("jButton77");
         jButton70.setBackground(new java.awt.Color(0, 153, 51));
         jButton70.setForeground(new java.awt.Color(150, 150, 150));
         jButton70.setName("jButton"); // NOI18N
-        jButton70.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton70.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton70.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -602,7 +602,7 @@ jButton77.setName("jButton77");
         jButton71.setBackground(new java.awt.Color(0, 153, 51));
         jButton71.setForeground(new java.awt.Color(150, 150, 150));
         jButton71.setName("jButton"); // NOI18N
-        jButton71.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton71.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton71.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -612,7 +612,7 @@ jButton77.setName("jButton77");
         jButton72.setBackground(new java.awt.Color(0, 153, 51));
         jButton72.setForeground(new java.awt.Color(150, 150, 150));
         jButton72.setName("jButton"); // NOI18N
-        jButton72.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton72.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton72.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -622,7 +622,7 @@ jButton77.setName("jButton77");
         jButton73.setBackground(new java.awt.Color(0, 153, 51));
         jButton73.setForeground(new java.awt.Color(150, 150, 150));
         jButton73.setName("jButton"); // NOI18N
-        jButton73.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton73.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton73.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -632,7 +632,7 @@ jButton77.setName("jButton77");
         jButton74.setBackground(new java.awt.Color(0, 153, 51));
         jButton74.setForeground(new java.awt.Color(150, 150, 150));
         jButton74.setName("jButton"); // NOI18N
-        jButton74.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton74.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton74.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -642,7 +642,7 @@ jButton77.setName("jButton77");
         jButton75.setBackground(new java.awt.Color(0, 153, 51));
         jButton75.setForeground(new java.awt.Color(150, 150, 150));
         jButton75.setName("jButton"); // NOI18N
-        jButton75.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton75.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton75.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -652,7 +652,7 @@ jButton77.setName("jButton77");
         jButton76.setBackground(new java.awt.Color(0, 153, 51));
         jButton76.setForeground(new java.awt.Color(150, 150, 150));
         jButton76.setName("jButton"); // NOI18N
-        jButton76.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton76.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton76.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -662,7 +662,7 @@ jButton77.setName("jButton77");
         jButton40.setBackground(new java.awt.Color(0, 153, 51));
         jButton40.setForeground(new java.awt.Color(150, 150, 150));
         jButton40.setName("jButton"); // NOI18N
-        jButton40.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton40.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton40.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -672,7 +672,7 @@ jButton77.setName("jButton77");
         jButton41.setBackground(new java.awt.Color(0, 153, 51));
         jButton41.setForeground(new java.awt.Color(150, 150, 150));
         jButton41.setName("jButton"); // NOI18N
-        jButton41.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton41.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton41.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -682,7 +682,7 @@ jButton77.setName("jButton77");
         jButton42.setBackground(new java.awt.Color(0, 153, 51));
         jButton42.setForeground(new java.awt.Color(150, 150, 150));
         jButton42.setName("jButton"); // NOI18N
-        jButton42.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton42.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -692,7 +692,7 @@ jButton77.setName("jButton77");
         jButton43.setBackground(new java.awt.Color(0, 153, 51));
         jButton43.setForeground(new java.awt.Color(150, 150, 150));
         jButton43.setName("jButton"); // NOI18N
-        jButton43.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton43.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -702,7 +702,7 @@ jButton77.setName("jButton77");
         jButton44.setBackground(new java.awt.Color(0, 153, 51));
         jButton44.setForeground(new java.awt.Color(150, 150, 150));
         jButton44.setName("jButton"); // NOI18N
-        jButton44.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton44.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -712,7 +712,7 @@ jButton77.setName("jButton77");
         jButton45.setBackground(new java.awt.Color(0, 153, 51));
         jButton45.setForeground(new java.awt.Color(150, 150, 150));
         jButton45.setName("jButton"); // NOI18N
-        jButton45.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton45.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -722,7 +722,7 @@ jButton77.setName("jButton77");
         jButton46.setBackground(new java.awt.Color(0, 153, 51));
         jButton46.setForeground(new java.awt.Color(150, 150, 150));
         jButton46.setName("jButton"); // NOI18N
-        jButton46.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton46.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -732,7 +732,7 @@ jButton77.setName("jButton77");
         jButton47.setBackground(new java.awt.Color(0, 153, 51));
         jButton47.setForeground(new java.awt.Color(150, 150, 150));
         jButton47.setName("jButton"); // NOI18N
-        jButton47.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton47.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton47.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -742,7 +742,7 @@ jButton77.setName("jButton77");
         jButton50.setBackground(new java.awt.Color(0, 153, 51));
         jButton50.setForeground(new java.awt.Color(150, 150, 150));
         jButton50.setName("jButton"); // NOI18N
-        jButton50.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton50.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -752,7 +752,7 @@ jButton77.setName("jButton77");
         jButton51.setBackground(new java.awt.Color(0, 153, 51));
         jButton51.setForeground(new java.awt.Color(150, 150, 150));
         jButton51.setName("jButton"); // NOI18N
-        jButton51.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton51.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton51.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -762,7 +762,7 @@ jButton77.setName("jButton77");
         jButton52.setBackground(new java.awt.Color(0, 153, 51));
         jButton52.setForeground(new java.awt.Color(150, 150, 150));
         jButton52.setName("jButton"); // NOI18N
-        jButton52.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton52.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton52.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -772,7 +772,7 @@ jButton77.setName("jButton77");
         jButton77.setBackground(new java.awt.Color(0, 153, 51));
         jButton77.setForeground(new java.awt.Color(150, 150, 150));
         jButton77.setName("jButton"); // NOI18N
-        jButton77.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton77.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton77.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -782,7 +782,7 @@ jButton77.setName("jButton77");
         jButton53.setBackground(new java.awt.Color(0, 153, 51));
         jButton53.setForeground(new java.awt.Color(150, 150, 150));
         jButton53.setName("jButton"); // NOI18N
-        jButton53.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton53.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton53.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -792,7 +792,7 @@ jButton77.setName("jButton77");
         jButton54.setBackground(new java.awt.Color(0, 153, 51));
         jButton54.setForeground(new java.awt.Color(150, 150, 150));
         jButton54.setName("jButton"); // NOI18N
-        jButton54.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton54.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton54.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -802,7 +802,7 @@ jButton77.setName("jButton77");
         jButton55.setBackground(new java.awt.Color(0, 153, 51));
         jButton55.setForeground(new java.awt.Color(150, 150, 150));
         jButton55.setName("jButton"); // NOI18N
-        jButton55.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton55.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -812,7 +812,7 @@ jButton77.setName("jButton77");
         jButton56.setBackground(new java.awt.Color(0, 153, 51));
         jButton56.setForeground(new java.awt.Color(150, 150, 150));
         jButton56.setName("jButton"); // NOI18N
-        jButton56.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton56.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton56.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -822,7 +822,7 @@ jButton77.setName("jButton77");
         jButton57.setBackground(new java.awt.Color(0, 153, 51));
         jButton57.setForeground(new java.awt.Color(150, 150, 150));
         jButton57.setName("jButton"); // NOI18N
-        jButton57.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton57.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -832,7 +832,7 @@ jButton77.setName("jButton77");
         jButton60.setBackground(new java.awt.Color(0, 153, 51));
         jButton60.setForeground(new java.awt.Color(150, 150, 150));
         jButton60.setName("jButton"); // NOI18N
-        jButton60.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton60.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -842,7 +842,7 @@ jButton77.setName("jButton77");
         jButton61.setBackground(new java.awt.Color(0, 153, 51));
         jButton61.setForeground(new java.awt.Color(150, 150, 150));
         jButton61.setName("jButton"); // NOI18N
-        jButton61.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton61.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton61.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -852,7 +852,7 @@ jButton77.setName("jButton77");
         jButton62.setBackground(new java.awt.Color(0, 153, 51));
         jButton62.setForeground(new java.awt.Color(150, 150, 150));
         jButton62.setName("jButton"); // NOI18N
-        jButton62.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton62.setPreferredSize(new java.awt.Dimension(75, 75));
         jButton62.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onClick(evt);
@@ -864,7 +864,7 @@ jButton77.setName("jButton77");
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -998,12 +998,12 @@ jButton77.setName("jButton77");
                                 .addComponent(jButton06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1087,7 +1087,7 @@ jButton77.setName("jButton77");
                     .addComponent(jButton72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
