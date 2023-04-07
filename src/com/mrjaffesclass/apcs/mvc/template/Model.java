@@ -66,6 +66,32 @@ public class Model implements MessageHandler {
       board[row][col] =  this.whoseMove ? 1 : -1;
   }
   
+  public int countWhiteSquares() {
+      int whiteSquares = 0;
+      for(int i = 0; i < 8; i++) {
+          for(int j = 0; j < 8; j++) {
+              if(board[i][j] == 1) {
+                  whiteSquares++;
+              }
+          }
+      }
+      return whiteSquares;
+  }
+  
+  public int countBlackSquares() {
+      int blackSquares = 0;
+      for(int i = 0; i < 8; i++) {
+          for(int j = 0; j < 8; j++) {
+              if(board[i][j] == -1) {
+                  blackSquares++;
+              }
+          }
+      }
+      return blackSquares;
+  }
+  
+  
+  
   /**
    * Initialize the model here and subscribe to any required messages
    */
@@ -91,7 +117,13 @@ public class Model implements MessageHandler {
         if(isLegalMove(MPString)) {
             setBoardState(MPString); //changes the board spot that was clicked 
                                         //to 1 if white and -1 if black
+                                        
             this.whoseMove = !this.whoseMove; // changes whose move it is
+            
+            this.mvcMessaging.notify("countWhiteSquares", countWhiteSquares());
+            this.mvcMessaging.notify("countBlackSquares", countBlackSquares());
+            
+            this.mvcMessaging.notify("displayMove", this.whoseMove);            
             this.mvcMessaging.notify("colorChange", MPString); // tells view to change the visuals
         }
             
