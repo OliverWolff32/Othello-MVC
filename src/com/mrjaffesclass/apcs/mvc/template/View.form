@@ -1445,7 +1445,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Black has 0 squares"/>
+            <Property name="text" type="java.lang.String" value="Black has 2 squares"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="WhiteSquaresLabel">
@@ -1457,7 +1457,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="White has 0 squares"/>
+            <Property name="text" type="java.lang.String" value="White has 2 squares"/>
           </Properties>
         </Component>
       </SubComponents>

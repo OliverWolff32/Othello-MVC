@@ -54,16 +54,84 @@ public class Model implements MessageHandler {
       return ret; 
   }
   
+  
+  public int getSquareValue(int row, int col) {
+      return this.board[row][col]; 
+  }
+  
+  
+  /**
+   * returns square int value 1 space in direction passed
+   * @param dir
+   * @param row
+   * @param col
+   * @return 
+   */
+  public int getDirectionSquare(String dir, int row, int col) {
+      if(dir == Constants.NORTH) {
+          return getSquareValue(row-1, col);
+      } else if (dir.equals(Constants.NORTHEAST)) {
+          return getSquareValue(row-1, col+1);
+          
+      } else if (dir.equals(Constants.EAST)) {
+          return getSquareValue(row, col+1);
+          
+      } else if (dir.equals(Constants.SOUTHEAST) ) {
+          return getSquareValue(row+1, col+1);
+          
+      } else if (dir.equals(Constants.SOUTH)) {
+          return getSquareValue(row+1, col);
+          
+      } else if (dir.equals(Constants.SOUTHWEST) )  {
+          return getSquareValue(row+1, col-1);
+          
+      } else if (dir.equals(Constants.WEST) ) {
+          return getSquareValue(row, col-1);
+          
+      } else if (dir.equals(Constants.NORTHWEST) ) {
+          return getSquareValue(row-1, col-1);
+      }
+      return 10; 
+  }
+  
+  
+  /**
+   * checks adjacent squares in a line recursively if they are the opposite color
+   * if there is an opposite color, continue in that direction until you hit 
+   * a blank square(return false) or a target colored square(return true)
+   * @return 
+   */
+  public Boolean checkAdjSquaresRec(int targetColor, String dir, int row, int col) { 
+      if(dir.contains("n")) {
+          if(row > 0) {
+              if(getDirectionSquare(dir, row, col) != targetColor) {
+                  checkAdjSquaresRec(targetColor, dir, row)
+              }
+          }
+      }
+      
+      
+      return false; 
+  }
+  
   public Boolean isLegalMove(String mp) {
+      Boolean legal;
       int row = Integer.valueOf(mp.substring(0,1));
       int col = Integer.valueOf(mp.substring(1,2));
-      return this.board[row][col] == 0;
+      legal = this.board[row][col] == 0; // check if 
+      
+      
+      
+      
+      
+      return legal;
   }
   
   public void setBoardState(String mp) {
       int row = Integer.valueOf(mp.substring(0,1));
       int col = Integer.valueOf(mp.substring(1,2));
       board[row][col] =  this.whoseMove ? 1 : -1;
+      this.mvcMessaging.notify("colorChange", mp); // tells view to change the visuals
   }
   
   public int countWhiteSquares() {
@@ -92,10 +160,24 @@ public class Model implements MessageHandler {
   
   
   
+  public void setInitialBoard() {
+      board[3][3] = 1;
+      this.mvcMessaging.notify("colorChange", "33t");
+      board[3][4] = -1;
+      this.mvcMessaging.notify("colorChange", "34f");
+      board[4][3] = -1;
+      this.mvcMessaging.notify("colorChange", "43f");
+      board[4][4] = 1;
+      this.mvcMessaging.notify("colorChange", "44t");
+  }
+  
+  
+  
   /**
    * Initialize the model here and subscribe to any required messages
    */
   public void init() {
+    setInitialBoard();
     this.mvcMessaging.subscribe("spaceClicked", this);
   }
   
@@ -116,15 +198,14 @@ public class Model implements MessageHandler {
         
         if(isLegalMove(MPString)) {
             setBoardState(MPString); //changes the board spot that was clicked 
-                                        //to 1 if white and -1 if black
-                                        
+                                     //to 1 if white and -1 if black        
+            
             this.whoseMove = !this.whoseMove; // changes whose move it is
             
             this.mvcMessaging.notify("countWhiteSquares", countWhiteSquares());
             this.mvcMessaging.notify("countBlackSquares", countBlackSquares());
+            this.mvcMessaging.notify("displayWhosMove", this.whoseMove);            
             
-            this.mvcMessaging.notify("displayMove", this.whoseMove);            
-            this.mvcMessaging.notify("colorChange", MPString); // tells view to change the visuals
         }
             
         

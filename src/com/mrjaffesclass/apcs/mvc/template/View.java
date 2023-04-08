@@ -107,7 +107,7 @@ jButton77.setName("jButton77");
     this.mvcMessaging.subscribe("countWhiteSquares", this);
     this.mvcMessaging.subscribe("countBlackSquares", this);
     this.mvcMessaging.subscribe("colorChange", this);
-    this.mvcMessaging.subscribe("displayMove", this);
+    this.mvcMessaging.subscribe("displayWhosMove", this);
   }
   
   @Override
@@ -129,7 +129,7 @@ jButton77.setName("jButton77");
             buttons[row][col].setBackground(Color.BLACK);
         }
         
-    } else if(messageName.equals("displayMove")){
+    } else if(messageName.equals("displayWhosMove")){
         String display = "'s move";
         String mover = (Boolean)messagePayload ? "White" : "Black";
         display = mover + display;
@@ -889,12 +889,12 @@ jButton77.setName("jButton77");
         BlackSquaresLabel.setFont(new java.awt.Font("Courier 10 Pitch", 1, 20)); // NOI18N
         BlackSquaresLabel.setForeground(new java.awt.Color(255, 255, 255));
         BlackSquaresLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BlackSquaresLabel.setText("Black has 0 squares");
+        BlackSquaresLabel.setText("Black has 2 squares");
 
         WhiteSquaresLabel.setFont(new java.awt.Font("Courier 10 Pitch", 1, 20)); // NOI18N
         WhiteSquaresLabel.setForeground(new java.awt.Color(255, 255, 255));
         WhiteSquaresLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        WhiteSquaresLabel.setText("White has 0 squares");
+        WhiteSquaresLabel.setText("White has 2 squares");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
