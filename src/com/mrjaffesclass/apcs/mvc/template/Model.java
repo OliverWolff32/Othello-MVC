@@ -59,6 +59,34 @@ public class Model implements MessageHandler {
       return this.board[row][col]; 
   }
   
+  public int getDistanceToWall(String dir, int row, int col) {
+      if(dir.equals(Constants.NORTH) ) {
+          return row;
+          
+      } else if (dir.equals(Constants.NORTHEAST)) {
+          return (7-col) < row ? (7-col) : row;
+          
+      } else if (dir.equals(Constants.EAST)) {
+          return (7-col);
+          
+      } else if (dir.equals(Constants.SOUTHEAST) ) {
+          return (7-col) < (7-row) ? (7-col) : (7-row);
+          
+      } else if (dir.equals(Constants.SOUTH)) {
+          return (7-row);
+          
+      } else if (dir.equals(Constants.SOUTHWEST) )  {
+          return (col) < (7-row) ? col : (7-row);
+          
+      } else if (dir.equals(Constants.WEST) ) {
+          return col ;
+          
+      } else if (dir.equals(Constants.NORTHWEST) ) {
+          return row < col ? row : col ;
+      }
+      
+      return -1;
+  }
   
   /**
    * returns square int value 1 space in direction passed
@@ -67,31 +95,50 @@ public class Model implements MessageHandler {
    * @param col
    * @return 
    */
-  public int getDirectionSquare(String dir, int row, int col) {
-      if(dir == Constants.NORTH) {
-          return getSquareValue(row-1, col);
+  public int getDirectionSquare(String dir, int row, int col, int spaces) {
+      if(dir.equals(Constants.NORTH) ) {
+          return getSquareValue(row-spaces, col);
+          
       } else if (dir.equals(Constants.NORTHEAST)) {
-          return getSquareValue(row-1, col+1);
+          return getSquareValue(row-spaces, col+spaces);
           
       } else if (dir.equals(Constants.EAST)) {
-          return getSquareValue(row, col+1);
+          return getSquareValue(row, col+spaces);
           
       } else if (dir.equals(Constants.SOUTHEAST) ) {
-          return getSquareValue(row+1, col+1);
+          return getSquareValue(row+spaces, col+spaces);
           
       } else if (dir.equals(Constants.SOUTH)) {
-          return getSquareValue(row+1, col);
+          return getSquareValue(row+spaces, col);
           
       } else if (dir.equals(Constants.SOUTHWEST) )  {
-          return getSquareValue(row+1, col-1);
+          return getSquareValue(row+spaces, col-spaces);
           
       } else if (dir.equals(Constants.WEST) ) {
-          return getSquareValue(row, col-1);
+          return getSquareValue(row, col-spaces);
           
       } else if (dir.equals(Constants.NORTHWEST) ) {
-          return getSquareValue(row-1, col-1);
+          return getSquareValue(row-spaces, col-spaces);
       }
       return 10; 
+  }
+  
+  public Boolean checkDirectionForLegalMove(String dir, int row, int col) {
+      String str = "";
+      int target = (getSquareValue(row, col));
+      
+      for (int i = 0; i < getDistanceToWall(dir, row, col); i++) {
+          str += getDirectionSquare(dir, row, col, i+1);          
+      }
+      Boolean bool; 
+      for(int i = 0; i < str.length(); i++) {
+          if(target != (-1 * Integer.valueOf(str.charAt(i)))) {
+              bool = false;
+          }
+      }// THIS IS WHERE I LEFT OFF
+      
+      
+      return false;
   }
   
   
@@ -101,14 +148,11 @@ public class Model implements MessageHandler {
    * a blank square(return false) or a target colored square(return true)
    * @return 
    */
-  public Boolean checkAdjSquaresRec(int targetColor, String dir, int row, int col) { 
-      if(dir.contains("n")) {
-          if(row > 0) {
-              if(getDirectionSquare(dir, row, col) != targetColor) {
-                  checkAdjSquaresRec(targetColor, dir, row)
-              }
-          }
-      }
+  public Boolean checkAdjSquaresRec(int targetColor, String dir, int row, int col, int count) { 
+      
+      
+      
+      
       
       
       return false; 
@@ -118,7 +162,7 @@ public class Model implements MessageHandler {
       Boolean legal;
       int row = Integer.valueOf(mp.substring(0,1));
       int col = Integer.valueOf(mp.substring(1,2));
-      legal = this.board[row][col] == 0; // check if 
+      legal = this.board[row][col] == 0; // check if target is filled
       
       
       
