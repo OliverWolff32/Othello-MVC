@@ -30,7 +30,7 @@ public class Model implements MessageHandler {
    */
   public Model(Messenger messages) {
     mvcMessaging = messages;
-    Boolean whoseMove = true; 
+    this.whoseMove = true; 
     for(int i = 0; i < 8; i++) {
         for(int j = 0; j < 8; j++) {
             board[i][j] = 0;
@@ -93,6 +93,7 @@ public class Model implements MessageHandler {
    * @param dir
    * @param row
    * @param col
+   * @param spaces
    * @return 
    */
   public int getDirectionSquare(String dir, int row, int col, int spaces) {
@@ -123,58 +124,62 @@ public class Model implements MessageHandler {
       return 10; 
   }
   
-  public Boolean checkDirectionForLegalMove(String dir, int row, int col) {
+  public Boolean checkDirection(String dir, int row, int col) {
       String str = "";
-      int target = (getSquareValue(row, col));
+      int target = (this.whoseMove ? 1 : 2);
       
       for (int i = 0; i < getDistanceToWall(dir, row, col); i++) {
           str += getDirectionSquare(dir, row, col, i+1);          
       }
-      Boolean bool; 
-      for(int i = 0; i < str.length(); i++) {
-          if(target != (-1 * Integer.valueOf(str.charAt(i)))) {
-              bool = false;
-          }
-      }// THIS IS WHERE I LEFT OFF
       
+      if(str.length() < 1) {
+          return false;
+      }
+      
+      
+      if(Character.getNumericValue(str.charAt(0)) == target || Character.getNumericValue(str.charAt(0)) == 0)  {// if char is anything other than opposite color
+               return false;
+      }
+      
+      for(int i = 1; i < str.length(); i++) {
+          if(Character.getNumericValue(str.charAt(i)) == target) { // if char is the target, then pattern is right
+              return true;
+          } else if(Character.getNumericValue(str.charAt(i)) == 0) { // if char is blank, then not good pattern
+              return false;
+          } // if neither(the opposite color again), then continue along the str
+      }
       
       return false;
   }
   
   
-  /**
-   * checks adjacent squares in a line recursively if they are the opposite color
-   * if there is an opposite color, continue in that direction until you hit 
-   * a blank square(return false) or a target colored square(return true)
-   * @return 
-   */
-  public Boolean checkAdjSquaresRec(int targetColor, String dir, int row, int col, int count) { 
-      
-      
-      
-      
-      
-      
-      return false; 
-  }
+  
   
   public Boolean isLegalMove(String mp) {
-      Boolean legal;
-      int row = Integer.valueOf(mp.substring(0,1));
-      int col = Integer.valueOf(mp.substring(1,2));
-      legal = this.board[row][col] == 0; // check if target is filled
       
-      
-      
-      
-      
-      return legal;
+      int row = Integer.parseInt(mp.substring(0,1));
+      int col = Integer.parseInt(mp.substring(1,2));
+      if(this.board[row][col] != 0) {// check if target is filled
+          return false;
+      }
+      if(!checkDirection(Constants.NORTH, row, col)
+          && !checkDirection(Constants.NORTHEAST, row, col)
+          && !checkDirection(Constants.EAST, row, col)
+          && !checkDirection(Constants.SOUTHEAST, row, col)
+          && !checkDirection(Constants.SOUTH, row, col)
+          && !checkDirection(Constants.SOUTHWEST, row, col)
+          && !checkDirection(Constants.WEST, row, col)
+          && !checkDirection(Constants.NORTHWEST, row, col)) {
+          return false;
+      } else {
+          return true;
+      }
   }
   
   public void setBoardState(String mp) {
-      int row = Integer.valueOf(mp.substring(0,1));
-      int col = Integer.valueOf(mp.substring(1,2));
-      board[row][col] =  this.whoseMove ? 1 : -1;
+      int row = Integer.parseInt(mp.substring(0,1));
+      int col = Integer.parseInt(mp.substring(1,2));
+      board[row][col] =  this.whoseMove ? 1 : 2;
       this.mvcMessaging.notify("colorChange", mp); // tells view to change the visuals
   }
   
@@ -194,7 +199,7 @@ public class Model implements MessageHandler {
       int blackSquares = 0;
       for(int i = 0; i < 8; i++) {
           for(int j = 0; j < 8; j++) {
-              if(board[i][j] == -1) {
+              if(board[i][j] == 2) {
                   blackSquares++;
               }
           }
@@ -207,9 +212,9 @@ public class Model implements MessageHandler {
   public void setInitialBoard() {
       board[3][3] = 1;
       this.mvcMessaging.notify("colorChange", "33t");
-      board[3][4] = -1;
+      board[3][4] = 2;
       this.mvcMessaging.notify("colorChange", "34f");
-      board[4][3] = -1;
+      board[4][3] = 2;
       this.mvcMessaging.notify("colorChange", "43f");
       board[4][4] = 1;
       this.mvcMessaging.notify("colorChange", "44t");
@@ -241,8 +246,9 @@ public class Model implements MessageHandler {
         
         
         if(isLegalMove(MPString)) {
-            setBoardState(MPString); //changes the board spot that was clicked 
-                                     //to 1 if white and -1 if black        
+            setBoardState(MPString);
+             //changes the board spot that was clicked 
+             //to 1 if white and -1 if black        
             
             this.whoseMove = !this.whoseMove; // changes whose move it is
             
@@ -250,6 +256,8 @@ public class Model implements MessageHandler {
             this.mvcMessaging.notify("countBlackSquares", countBlackSquares());
             this.mvcMessaging.notify("displayWhosMove", this.whoseMove);            
             
+        } else {
+            this.mvcMessaging.notify("illegalMove", this.whoseMove);
         }
             
         
