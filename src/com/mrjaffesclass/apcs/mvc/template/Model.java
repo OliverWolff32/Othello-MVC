@@ -124,13 +124,48 @@ public class Model implements MessageHandler {
       return 10; 
   }
   
-  public Boolean checkDirection(String dir, int row, int col) {
-      String str = "";
-      int target = (this.whoseMove ? 1 : 2);
-      
-      for (int i = 0; i < getDistanceToWall(dir, row, col); i++) {
-          str += getDirectionSquare(dir, row, col, i+1);          
+   public String getDirectionIndexes(String dir, int row, int col, int spaces) {
+       String str = "";
+      if(dir.equals(Constants.NORTH) ) {
+          str += row-spaces;        
+          str += col;
+          return str;
+      } else if (dir.equals(Constants.NORTHEAST)) {
+          str += row-spaces;
+          str += col+spaces;
+          return str;
+      } else if (dir.equals(Constants.EAST)) {
+          str += row;
+          str += col+spaces;          
+          return str;
+      } else if (dir.equals(Constants.SOUTHEAST) ) {
+          str += row+spaces;
+          str += col+spaces;          
+          return str;
+      } else if (dir.equals(Constants.SOUTH)) {
+          str += row+spaces;
+          str += col;
+          return str;          
+      } else if (dir.equals(Constants.SOUTHWEST) )  {
+          str += row+spaces;
+          str += col-spaces;
+          return str;          
+      } else if (dir.equals(Constants.WEST) ) {
+          str += row;
+          str += col-spaces;
+          return str;          
+      } else if (dir.equals(Constants.NORTHWEST) ) {
+          str += row-spaces;
+          str += col-spaces;
+          return str;
       }
+      return ""; 
+  }
+  
+  public Boolean checkDirection(String dir, int row, int col) {
+      
+      int target = (this.whoseMove ? 1 : 2);
+      String str = getDirectionSquares(dir, row, col);
       
       if(str.length() < 1) {
           return false;
@@ -152,6 +187,22 @@ public class Model implements MessageHandler {
       return false;
   }
   
+  
+  /**
+   * gets a string where the characters are board values 1, 2, or 0 extending
+   * out from [row, col] until the wall. Doesn't include [row, col].
+   * @param dir
+   * @param row
+   * @param col
+   * @return 
+   */
+  public String getDirectionSquares(String dir, int row, int col) {
+      String str = "";
+      for (int i = 0; i < getDistanceToWall(dir, row, col); i++) {
+          str += getDirectionSquare(dir, row, col, i+1);          
+      }
+      return str;
+  }
   
   
   
@@ -175,6 +226,7 @@ public class Model implements MessageHandler {
           return true;
       }
   }
+  
   
   public void setBoardState(String mp) {
       int row = Integer.parseInt(mp.substring(0,1));
@@ -220,16 +272,128 @@ public class Model implements MessageHandler {
       this.mvcMessaging.notify("colorChange", "44t");
   }
   
+  public void flipSquare(int row, int col) {
+      int square = getSquareValue(row, col);
+      
+      if(square == 1) {
+          this.board[row][col] = 2;
+      } else if(square == 2) {
+          this.board[row][col] = 1;
+      }
+      
+  }
   
+  public int inverseOfValue(int val) {
+      if(val == 1) {
+          return 2;
+      } else if(val == 2) {
+          return 1;
+      }
+      return 0;
+  }
+  
+  public int getLastIndexOfSquaresToFlip(String str, int target) {
+      
+      
+      for(int i = 1; i < str.length(); i++){
+          if (Character.getNumericValue(str.charAt(i)) != (inverseOfValue(target))) {
+              return i-1;
+          }
+      }
+      
+      
+      return -1;
+  }
   
   /**
-   * Initialize the model here and subscribe to any required messages
+   * Initialize the model here, set board state, subscribe to any required messages
    */
   public void init() {
     setInitialBoard();
     this.mvcMessaging.subscribe("spaceClicked", this);
   }
   
+  public void changeSurroundedSquares(String mp) {
+      int row = Integer.parseInt(mp.substring(0,1));
+      int col = Integer.parseInt(mp.substring(1,2));
+      
+      int targetValue = getSquareValue(row, col);
+      int squaresOutToChange;
+      int rowToChange; 
+      int colToChange;
+      
+      if(!checkDirection(Constants.NORTH, row, col)) {
+          squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
+          for(int i = 1; i < squaresOutToChange+1; i++) {
+              rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTH, row, col, i).charAt(0) );
+              colToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTH, row, col, i).charAt(1)) ;
+              flipSquare(rowToChange, colToChange);
+          }
+      }
+      
+      if(!checkDirection(Constants.NORTHEAST, row, col)) {
+          squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
+          for(int i = 1; i < squaresOutToChange+1; i++) {
+              rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTHEAST, row, col, i).charAt(0) );
+              colToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTHEAST, row, col, i).charAt(1));
+              flipSquare(rowToChange, colToChange);
+          }
+      }
+      
+      if(!checkDirection(Constants.EAST, row, col)) {
+          squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
+          for(int i = 1; i < squaresOutToChange+1; i++) {
+              rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.EAST, row, col, i).charAt(0) );
+              colToChange = Character.getNumericValue(getDirectionIndexes(Constants.EAST, row, col, i).charAt(1) );
+              flipSquare(rowToChange, colToChange);
+          }
+      }
+      
+      if(!checkDirection(Constants.SOUTHEAST, row, col)) {
+          squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
+          for(int i = 1; i < squaresOutToChange+1; i++) {
+              rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTHEAST, row, col, i).charAt(0) );
+              colToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTHEAST, row, col, i).charAt(1) );
+              flipSquare(rowToChange, colToChange);
+          }
+      }
+      
+      if(!checkDirection(Constants.SOUTH, row, col)) {
+          squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
+          for(int i = 1; i < squaresOutToChange+1; i++) {
+              rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTH, row, col, i).charAt(0) );
+              colToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTH, row, col, i).charAt(1) );
+              flipSquare(rowToChange, colToChange);
+          }
+      }
+      
+      if(!checkDirection(Constants.SOUTHWEST, row, col)) {
+          squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
+          for(int i = 1; i < squaresOutToChange+1; i++) {
+              rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTHWEST, row, col, i).charAt(0) );
+              colToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTHWEST, row, col, i).charAt(1) );
+              flipSquare(rowToChange, colToChange);
+          }
+      }
+      
+      if(!checkDirection(Constants.WEST, row, col)) {
+          squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
+          for(int i = 1; i < squaresOutToChange+1; i++) {
+              rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.WEST, row, col, i).charAt(0) );
+              colToChange = Character.getNumericValue(getDirectionIndexes(Constants.WEST, row, col, i).charAt(1) );
+              flipSquare(rowToChange, colToChange);
+          }
+      }
+      
+      if(!checkDirection(Constants.NORTHWEST, row, col)) {
+          squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
+          for(int i = 1; i < squaresOutToChange+1; i++) {
+              rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTHWEST, row, col, i).charAt(0)) ;
+              colToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTHWEST, row, col, i).charAt(1)) ;
+              flipSquare(rowToChange, colToChange);
+          }
+      }
+  }
   
   
   
@@ -247,6 +411,7 @@ public class Model implements MessageHandler {
         
         if(isLegalMove(MPString)) {
             setBoardState(MPString);
+            changeSurroundedSquares(MPString);
              //changes the board spot that was clicked 
              //to 1 if white and -1 if black        
             
