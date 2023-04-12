@@ -198,8 +198,8 @@ public class Model implements MessageHandler {
    */
   public String getDirectionSquares(String dir, int row, int col) {
       String str = "";
-      for (int i = 0; i < getDistanceToWall(dir, row, col); i++) {
-          str += getDirectionSquare(dir, row, col, i+1);          
+      for (int i = 1; i < getDistanceToWall(dir, row, col); i++) {
+          str += getDirectionSquare(dir, row, col, i);          
       }
       return str;
   }
@@ -274,16 +274,26 @@ public class Model implements MessageHandler {
   
   public void flipSquare(int row, int col) {
       int square = getSquareValue(row, col);
+      int newColor = 0;
       
       if(square == 1) {
-          this.board[row][col] = 2;
+          newColor = 2;
       } else if(square == 2) {
-          this.board[row][col] = 1;
+          newColor = 1;
       }
       
+      String mp = String.valueOf(row);
+      mp += col;
+      if(newColor == 1) {
+          mp += "t";
+      } else if (newColor == 2) {
+          mp += "f";
+      }
+      
+      this.mvcMessaging.notify("colorChange", mp);
   }
   
-  public int inverseOfValue(int val) {
+  public int getInverseOfValue(int val) {
       if(val == 1) {
           return 2;
       } else if(val == 2) {
@@ -296,7 +306,7 @@ public class Model implements MessageHandler {
       
       
       for(int i = 1; i < str.length(); i++){
-          if (Character.getNumericValue(str.charAt(i)) != (inverseOfValue(target))) {
+          if (Character.getNumericValue(str.charAt(i)) != (getInverseOfValue(target))) {
               return i-1;
           }
       }
@@ -322,72 +332,72 @@ public class Model implements MessageHandler {
       int rowToChange; 
       int colToChange;
       
-      if(!checkDirection(Constants.NORTH, row, col)) {
+      if(checkDirection(Constants.NORTH, row, col)) {
           squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
-          for(int i = 1; i < squaresOutToChange+1; i++) {
+          for(int i = 1; i <= squaresOutToChange; i++) {
               rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTH, row, col, i).charAt(0) );
               colToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTH, row, col, i).charAt(1)) ;
               flipSquare(rowToChange, colToChange);
           }
       }
       
-      if(!checkDirection(Constants.NORTHEAST, row, col)) {
+      if(checkDirection(Constants.NORTHEAST, row, col)) {
           squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
-          for(int i = 1; i < squaresOutToChange+1; i++) {
-              rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTHEAST, row, col, i).charAt(0) );
+          for(int i = 1; i <= squaresOutToChange; i++) {
+              rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTHEAST, row, col, i).charAt(0));
               colToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTHEAST, row, col, i).charAt(1));
               flipSquare(rowToChange, colToChange);
           }
       }
       
-      if(!checkDirection(Constants.EAST, row, col)) {
+      if(checkDirection(Constants.EAST, row, col)) {
           squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
-          for(int i = 1; i < squaresOutToChange+1; i++) {
+          for(int i = 1; i <= squaresOutToChange; i++) {
               rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.EAST, row, col, i).charAt(0) );
               colToChange = Character.getNumericValue(getDirectionIndexes(Constants.EAST, row, col, i).charAt(1) );
               flipSquare(rowToChange, colToChange);
           }
       }
       
-      if(!checkDirection(Constants.SOUTHEAST, row, col)) {
+      if(checkDirection(Constants.SOUTHEAST, row, col)) {
           squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
-          for(int i = 1; i < squaresOutToChange+1; i++) {
+          for(int i = 1; i <= squaresOutToChange; i++) {
               rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTHEAST, row, col, i).charAt(0) );
               colToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTHEAST, row, col, i).charAt(1) );
               flipSquare(rowToChange, colToChange);
           }
       }
       
-      if(!checkDirection(Constants.SOUTH, row, col)) {
+      if(checkDirection(Constants.SOUTH, row, col)) {
           squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
-          for(int i = 1; i < squaresOutToChange+1; i++) {
+          for(int i = 1; i <= squaresOutToChange; i++) {
               rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTH, row, col, i).charAt(0) );
               colToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTH, row, col, i).charAt(1) );
               flipSquare(rowToChange, colToChange);
           }
       }
       
-      if(!checkDirection(Constants.SOUTHWEST, row, col)) {
+      if(checkDirection(Constants.SOUTHWEST, row, col)) {
           squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
-          for(int i = 1; i < squaresOutToChange+1; i++) {
+          for(int i = 1; i <= squaresOutToChange; i++) {
               rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTHWEST, row, col, i).charAt(0) );
               colToChange = Character.getNumericValue(getDirectionIndexes(Constants.SOUTHWEST, row, col, i).charAt(1) );
               flipSquare(rowToChange, colToChange);
           }
       }
       
-      if(!checkDirection(Constants.WEST, row, col)) {
+      if(checkDirection(Constants.WEST, row, col)) {
           squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
-          for(int i = 1; i < squaresOutToChange+1; i++) {
+          for(int i = 1; i <= squaresOutToChange; i++) {
               rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.WEST, row, col, i).charAt(0) );
               colToChange = Character.getNumericValue(getDirectionIndexes(Constants.WEST, row, col, i).charAt(1) );
               flipSquare(rowToChange, colToChange);
           }
       }
       
-      if(!checkDirection(Constants.NORTHWEST, row, col)) {
+      if(checkDirection(Constants.NORTHWEST, row, col)) {
           squaresOutToChange = 1 + getLastIndexOfSquaresToFlip(getDirectionSquares(Constants.NORTH, row, col), targetValue);
-          for(int i = 1; i < squaresOutToChange+1; i++) {
+          for(int i = 1; i <= squaresOutToChange; i++) {
               rowToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTHWEST, row, col, i).charAt(0)) ;
               colToChange = Character.getNumericValue(getDirectionIndexes(Constants.NORTHWEST, row, col, i).charAt(1)) ;
               flipSquare(rowToChange, colToChange);
