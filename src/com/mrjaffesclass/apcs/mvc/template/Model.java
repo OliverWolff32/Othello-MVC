@@ -198,7 +198,7 @@ public class Model implements MessageHandler {
    */
   public String getDirectionSquares(String dir, int row, int col) {
       String str = "";
-      for (int i = 1; i < getDistanceToWall(dir, row, col); i++) {
+      for (int i = 1; i <= getDistanceToWall(dir, row, col); i++) {
           str += getDirectionSquare(dir, row, col, i);          
       }
       return str;
