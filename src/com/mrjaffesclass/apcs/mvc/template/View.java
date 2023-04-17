@@ -14,6 +14,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
   private final Messenger mvcMessaging;
   private final JButton[][] buttons;
+  Color baseGreen = new Color(0, 153,51);
   
   
   
@@ -109,6 +110,9 @@ jButton77.setName("jButton77");
     this.mvcMessaging.subscribe("colorChange", this);
     this.mvcMessaging.subscribe("displayWhosMove", this);
     this.mvcMessaging.subscribe("illegalMove", this);
+    this.mvcMessaging.subscribe("displayPassed", this);
+    this.mvcMessaging.subscribe("gameOver", this);
+    this.mvcMessaging.subscribe("setNeutral", this);
   }
   
   @Override
@@ -145,6 +149,24 @@ jButton77.setName("jButton77");
         String mover = (Boolean)messagePayload ? "White" : "Black";
         display = mover + display;
         MoveLabel.setText("Illegal move.\n Still " + display);
+    } else if(messageName.equals("displayPassed")) {
+        String newMover = (Boolean)messagePayload ? "White" : "Black";
+        String oldMover = !(Boolean)messagePayload ? "White" : "Black";
+        MoveLabel.setText(oldMover + " passed. It is " + newMover + "'s turn.");
+    } else if(messageName.equals("gameOver")) {
+        String winner = (String)messagePayload;
+        if(winner.equals("Draw")) {
+            MoveLabel.setText("Game over. " + winner + ".");
+        } else {
+            MoveLabel.setText("Game over. " + winner + " won!");
+        }
+        
+    } else if(messageName.equals("setNeutral")) {
+        String mp = (String)messagePayload;
+        
+        int row = Integer.parseInt(mp.substring(0, 1));
+        int col = Integer.parseInt(mp.substring(1, 2));
+        buttons[row][col].setBackground(baseGreen);
     }
   }
 
@@ -237,15 +259,15 @@ jButton77.setName("jButton77");
         MoveLabel = new javax.swing.JLabel();
         BlackSquaresLabel = new javax.swing.JLabel();
         WhiteSquaresLabel = new javax.swing.JLabel();
+        passButton = new javax.swing.JButton();
+        newGame = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(54, 75, 87));
-        setPreferredSize(new java.awt.Dimension(700, 800));
 
         jPanel1.setBackground(new java.awt.Color(54, 75, 87));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jPanel1.setPreferredSize(new java.awt.Dimension(700, 900));
 
         jButton75.setBackground(new java.awt.Color(0, 153, 51));
         jButton75.setForeground(new java.awt.Color(150, 150, 150));
@@ -902,6 +924,30 @@ jButton77.setName("jButton77");
         WhiteSquaresLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         WhiteSquaresLabel.setText("White has 2 squares");
 
+        passButton.setBackground(new java.awt.Color(54, 75, 87));
+        passButton.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        passButton.setForeground(new java.awt.Color(255, 255, 255));
+        passButton.setText("PASS");
+        passButton.setBorderPainted(false);
+        passButton.setName("passButton"); // NOI18N
+        passButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onClick(evt);
+            }
+        });
+
+        newGame.setBackground(new java.awt.Color(54, 75, 87));
+        newGame.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        newGame.setForeground(new java.awt.Color(255, 255, 255));
+        newGame.setText("NEW GAME");
+        newGame.setBorderPainted(false);
+        newGame.setName("newGame"); // NOI18N
+        newGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newGameonClick(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1046,8 +1092,14 @@ jButton77.setName("jButton77");
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BlackSquaresLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(WhiteSquaresLabel, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addContainerGap(31, Short.MAX_VALUE))
+                            .addComponent(WhiteSquaresLabel, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(newGame, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(passButton, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1145,23 +1197,24 @@ jButton77.setName("jButton77");
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(MoveLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(passButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(newGame, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 701, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -1171,8 +1224,13 @@ jButton77.setName("jButton77");
         // TODO add your handling code here:
         JButton button = (JButton)evt.getSource();
         String buttonName = button.getName();
-        this.mvcMessaging.notify("spaceClicked", buttonName);
+        this.mvcMessaging.notify("buttonClicked", buttonName);
     }//GEN-LAST:event_onClick
+
+    private void newGameonClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameonClick
+        // TODO add your handling code here:
+        this.mvcMessaging.notify("newGame");
+    }//GEN-LAST:event_newGameonClick
 
   /**
    * @param args the command line arguments
@@ -1247,5 +1305,7 @@ jButton77.setName("jButton77");
     private javax.swing.JButton jButton76;
     private javax.swing.JButton jButton77;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton newGame;
+    private javax.swing.JButton passButton;
     // End of variables declaration//GEN-END:variables
 }
